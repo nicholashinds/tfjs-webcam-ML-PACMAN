@@ -46,12 +46,12 @@
       <div class="panel-row panel-row-top">
 
         <div class="panel-cell panel-cell-left panel-cell-fill">
-          <!-- <p class="help-text">
+          <p class="help-text">
             Click to add the <br />
             current camera <br />
             view as an example <br />
             for that control
-          </p> -->
+          </p>
         </div>
         <!-- ./panel-cell -->
 
@@ -61,7 +61,7 @@
               <div class="thumb-box-inner">
                 <canvas class="thumb" width=224 height=224 id="up-thumb"></canvas>
               </div>
-              <button class="record-button" id="up" /><span>Add Sample</span></button>
+              <button class="record-button" id="up" ><span>Add Sample</span></button>
             </div>
             <p>
               <span id="up-total">0</span> <span class="highlight"> UP </span> Examples
@@ -212,9 +212,34 @@
 
         </div><!-- /.hyper-params -->
 
-
+        <div class="border-box">
+          <div class="box-padding">
+            <div class ="description-header">Learning rate</div>
+              <ul class="-ulbody">
+                <li>The step size at each iteration of the optimization process (minimizing the loss function). </li>
+              </ul>
+            <div class ="description-header">Batch size</div>
+              <ul class="ul-body">
+                <li>The percentage of pictures used in each data set the model trains on.</li>
+              </ul>
+            <div class ="description-header">Epochs</div>
+              <ul class="ul-body">
+                <li>The number of times the model trains on each set of data.</li>
+              </ul>
+            <div class ="description-header">Hidden units</div>
+              <ul class="ul-body">
+                <li>The number of neurons in a hidden layer of the model's neural network.</li>
+              </ul>
+            <div class ="description-header">Note:</div>
+              <ul class = "ul-last">
+                <li>A larger or smaller value of each parameter doesn't necessarily equate to better performance.</li>
+              </ul>
+          </div>
+        </div><!-- /.border-box -->
 
       </div><!-- /.panel-row -->
+
+      
 
     </div><!-- /.panel -->
 
@@ -242,6 +267,7 @@
       </div>
     </div>
     <p id="copyright">PAC-MAN&trade; &copy; BANDAI NAMCO Entertainment Inc.</p>
+    <div id="status">Please note the model may have inaccuracies due to limited pictures, hard-to-read data, or other factors.</div>
   </div>
 
   <script src="https://storage.googleapis.com/tfjs-examples/assets/webcam-transfer-learning/pacman-google.js"></script>
