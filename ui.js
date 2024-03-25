@@ -83,6 +83,7 @@ async function handler(label) {
     document.body.setAttribute('data-active', CONTROLS[label]);
     total.innerText = ++totals[label];
     await tf.nextFrame();
+    console.log('Direction: ' + className);
   }
   document.body.removeAttribute('data-active');
 }

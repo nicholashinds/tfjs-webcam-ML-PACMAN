@@ -35,16 +35,16 @@
     </div>
   </div>
 
+
+
   <div class="controller-panels" id="controller" style="display:none">
-
-
 
     <div class="panel joystick-panel">
       <span class="instruction">
         <!-- add your instructions here -->
       </span>
       <div class="panel-row panel-row-top">
-
+        
         <div class="panel-cell panel-cell-left panel-cell-fill">
           <p class="help-text">
             Click to add the <br />
@@ -74,6 +74,16 @@
 
       </div><!-- /.panel-row -->
       <div class="panel-row panel-row-middle">
+        <div class="direction-selector">
+          <label>View current samples (click to delete):</label>
+          <select id="directions">
+            <option value="none">None</option>
+            <option value="up">Up</option>
+            <option value="down">Down</option>
+            <option value="left">Left</option>
+            <option value="right">Right</option>
+          </select>
+        </div>
         <div class="panel-cell panel-cell-left">
           <div class="thumb-box">
             <div class="thumb-box-outer">
@@ -267,7 +277,7 @@
       </div>
     </div>
     <p id="copyright">PAC-MAN&trade; &copy; BANDAI NAMCO Entertainment Inc.</p>
-    <div id="status">Please note the model may have inaccuracies due to limited pictures, hard-to-read data, or other factors.</div>
+    <div id="status">DISCLAIMER: Please note the model may have inaccuracies due to limited pictures, hard-to-read data, or other factors.</div>
   </div>
 
   <script src="https://storage.googleapis.com/tfjs-examples/assets/webcam-transfer-learning/pacman-google.js"></script>
