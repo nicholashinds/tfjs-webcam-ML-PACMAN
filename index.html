@@ -74,16 +74,42 @@
 
       </div><!-- /.panel-row -->
       <div class="panel-row panel-row-middle">
-        <div class="direction-selector">
-          <label>View current samples (click to delete):</label>
-          <select id="directions">
-            <option value="none">None</option>
-            <option value="up">Up</option>
-            <option value="down">Down</option>
-            <option value="left">Left</option>
-            <option value="right">Right</option>
-          </select>
+        <div class="directon-canvas-alignment">
+          <div class="direction-selector">
+            <label>View current samples (click to delete):</label>
+            <select id="directions">
+              <option value="none">None</option>
+              <option value="up">Up</option>
+              <option value="down">Down</option>
+              <option value="left">Left</option>
+              <option value="right">Right</option>
+            </select>
+          </div>
+          <div class="thumb-box-2">
+            <canvas class="thumb2" width=224 height=224 id="left-thumb-2"></canvas>
+            <canvas class="thumb2" width=224 height=224 id="right-thumb-2"></canvas>
+            <canvas class="thumb2" width=224 height=224 id="down-thumb-2"></canvas>
+            <canvas class="thumb2" width=224 height=224 id="up-thumb-2"></canvas>
+          </div>
         </div>
+        <script>
+          document.querySelectorAll('.thumb2').forEach(canvas => {
+            canvas.style.display = 'none';
+          });
+
+          document.getElementById('directions').addEventListener('change', function() {
+            const selectedDirection = this.value;
+
+            document.querySelectorAll('.thumb2').forEach(canvas => {
+              canvas.style.display = 'none';
+            });
+
+            const thumbCanvas = document.getElementById(selectedDirection + '-thumb-2');
+            if (thumbCanvas) {
+              thumbCanvas.style.display = 'flex';
+            }
+          });
+        </script>
         <div class="panel-cell panel-cell-left">
           <div class="thumb-box">
             <div class="thumb-box-outer">

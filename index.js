@@ -55,7 +55,6 @@ ui.setExampleHandler(async label => {
 
   // Draw the preview thumbnail.
   ui.drawThumb(img, label);
-  img.dispose();
 })
 
 /**

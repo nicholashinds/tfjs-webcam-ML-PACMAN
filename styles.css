@@ -339,6 +339,17 @@ button#predict{
   height: 66px;
   transform: scaleX(-1);
 }
+.thumb2 {
+  height: 66px;
+  transform: scaleX(-1);
+}
+.thumb-box-2 {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 3px;
+  overflow: auto;
+}
 .thumb-box-outer .record-button {
   height: 100%;
   left: 0;
@@ -413,7 +424,7 @@ ul {
   padding: 8px;
 }
 
-.direction-selector {
+.directon-canvas-alignment {
   border: 1px solid #585858;
   width: 350px;
   height: 300px;
@@ -423,6 +434,13 @@ ul {
   display: flex;
   align-items: flex-start;
   padding: 8px;
+  flex-direction: column;
+}
+.direction-selector {
+  display: flex;
+  width: 350px;
+  align-items: flex-start;
+  flex-direction: row;
 }
 
 .direction-selector label {
